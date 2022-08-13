@@ -43,7 +43,7 @@ function showAlert(errorText) {
 
 function getMovies(keyword){
     const movieList = document.getElementById('movie-list'); 
-    return fetch('http://www.omdbapi.com/?apikey=aa676088&type=movie&s=' + keyword)
+    return fetch('https://www.omdbapi.com/?apikey=aa676088&type=movie&s=' + keyword)
         .then(response => {
             if(!response.ok){
                 throw new Error(response.statusText)
@@ -79,7 +79,7 @@ function showMovieList(m) {
 }
 
 function getMovieDetail(id) {
-    return fetch('http://www.omdbapi.com/?apikey=aa676088&i=' + id)
+    return fetch('https://www.omdbapi.com/?apikey=aa676088&i=' + id)
         .then(response => {
             if(!response.ok){
                 throw new Error(response.statusText)
