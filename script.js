@@ -59,9 +59,15 @@ function getMovies(keyword){
 }
 
 function updateUI(movies) {
+    const movieContainer = document.querySelector('.movie-container')
+    movieContainer.classList.toggle('justify-content-center');
+    movieContainer.classList.toggle('vh-100');
+    const searchBar = document.querySelector('.search-bar');
+    searchBar.classList.toggle('mt-3')
+    // searchBar.classList.toggle('ms-3')
     let cards = ''
     movies.forEach(m => cards += showMovieList(m))
-    const movieList = document.getElementById('movie-list');
+    const movieList = document.getElementById('movie-list')
     movieList.innerHTML = cards
 }
 
